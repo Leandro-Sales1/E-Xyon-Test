@@ -1,13 +1,9 @@
+import { MainContent } from "../../components/mainContent/MainContent"
 import { SideBar } from "../../components/sideBar/SideBar"
 import "./register.css"
 
 
-
-
-
 export const Register = () => {
-
-
   return (
     <>
       <header>
@@ -15,8 +11,7 @@ export const Register = () => {
       </header>
       <main className="mainContent">
         <SideBar />
-        <div>aaaaaaaaaaaaaaaaaaaaaaa</div>
-
+        <MainContent />
       </main>
     </>
   )

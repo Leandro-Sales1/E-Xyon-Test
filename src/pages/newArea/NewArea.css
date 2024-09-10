@@ -1,0 +1,41 @@
+.divFormFlex {
+  margin: 2rem 0 0 5rem;
+  display: flex;
+}
+
+.nameFormDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 12px;
+  color: #00000080;
+}
+
+.labelToggle {
+  display: flex;
+  align-items: center;
+  color: #00000080;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 2px;
+}
+
+.formDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 0 0 5rem;
+}
+
+.buttonsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5.5rem 5rem 0 0;
+  border-top: var(--border);
+  margin-top: 6.5rem;
+}

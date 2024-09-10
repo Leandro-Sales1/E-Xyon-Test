@@ -6,12 +6,17 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { NewArea } from './pages/newArea/NewArea';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Register></Register>,
+  },
+  {
+    path: "nova-area",
+    element: <NewArea/>,
   },
 ]);
 

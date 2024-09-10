@@ -1,5 +1,5 @@
 
-import { TextField, InputAdornment } from '@mui/material';
+import { InputAdornment, FormControl, OutlinedInput } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import "./SideBar.css"
 import { Button } from '@mui/material';
@@ -21,26 +21,22 @@ export const SideBar = () => {
   }
   const handleOnClick = (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
     setIsSelected(event.currentTarget.id)
-
   }
+
   return (
     <aside className="sideBar">
       <section className="topSide">
-        <TextField
-          sx={{
-            width: '12rem',
-            margin: '2rem 0 0 2rem'
-          }}
-          variant="outlined"
-          placeholder="Busque"
-          InputProps={{
-            startAdornment: (
+        <FormControl sx={{ width: '12rem', margin: '2rem 0 0 2rem' }}>
+          <OutlinedInput
+            sx={{ height: '1.75rem', borderRadius: '0.5rem' }}
+            placeholder="Busque"
+            startAdornment={
               <InputAdornment position="start">
                 <SearchIcon />
               </InputAdornment>
-            ),
-          }}
-        />
+            }
+          />
+        </FormControl>
         <Button
           sx={{
             minWidth: '27px',
@@ -50,10 +46,11 @@ export const SideBar = () => {
             margin: '2rem 0.75rem 0 0',
             borderRadius: '0.5rem',
             backgroundColor: '#FFFFFF',
-          }}
-          style={{
             color: 'var(--primary-color)',
             border: ' var(--border)',
+            '& .MuiButton-startIcon': {
+              margin: '0'
+            }
           }}
           variant="contained"
           disableRipple
@@ -75,7 +72,7 @@ export const SideBar = () => {
                 onClick={e => handleOnClick(e)}
                 sx={{
                   paddingLeft: '3.125rem',
-                  cursor: 'pointer',    
+                  cursor: 'pointer',
                   // Conditionally aplly the selected style              
                   ...(isSelected === item && styleSelected),
                 }}
@@ -86,9 +83,7 @@ export const SideBar = () => {
             </div>
           ))}
         </List>
-
       </section>
     </aside >
-
   )
 }
