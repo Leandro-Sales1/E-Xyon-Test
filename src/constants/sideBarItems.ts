@@ -1,0 +1,16 @@
+export const sideBarItems = [
+  "Ação judicial",
+  "Área judicial",
+  "Assunto judicial",
+  "Campos extras",
+  "Centro de Custo",
+  "Empresa",
+  "Fases",
+  "Local de Serviço",
+  "Motivo",
+  "Partes",
+  "Prioridade",
+  "Sub-motivo",
+  "Tags",
+  "Tipos de Andamentos",
+];

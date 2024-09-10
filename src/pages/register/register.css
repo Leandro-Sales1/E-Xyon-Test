@@ -1,0 +1,25 @@
+
+/* CSS variables*/
+:root {
+  --primary-color: #1C5297;
+  --border : solid 0.6px #00000033;
+}
+
+.title {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 22px;
+  margin: 8.25rem 0rem 0 0;
+  padding: 0 0 1.125rem 1.5rem; 
+  border-bottom: var(--border);
+}
+.line{
+  margin: 0;
+  height: 0;
+  border-bottom: var(--border);
+}
+
+.mainContent{
+  display: flex;
+  
+}

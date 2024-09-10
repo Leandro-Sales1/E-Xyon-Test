@@ -1,0 +1,21 @@
+.sideBar {
+  width: 16rem;
+  border-right: var(--border);
+  height: auto;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 0.5rem !important;
+  height: 1.75rem;
+}
+
+.MuiButton-startIcon{
+  margin: 0 !important;
+}
+
+.topSide {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
