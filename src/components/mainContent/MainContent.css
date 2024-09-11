@@ -53,11 +53,9 @@
 }
 
 .footer {
-  position: absolute;
-  bottom: 7.75rem;
   display: flex;
-  width: 78%;
-  margin: 0 5.2rem;
+  width: 90%;
+  margin: 7.75rem auto 0 auto;
   height: 1.75rem;
   align-items: center;
   justify-content: space-between;
