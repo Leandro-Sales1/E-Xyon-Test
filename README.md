@@ -10,7 +10,7 @@
 
 ## Procedimento para rodar o projeto:
 ### Em produção:
-
+https://e-xyon-test.vercel.app/
 ### Localmente:
 * Faça o clone do repositório
 * Vá até a pasta referente ao projeto
@@ -27,7 +27,7 @@ Adicionei extras, como o icon do E-xyon ao projeto e o status inativo, se o togg
 
 Link do figma do teste: https://www.figma.com/design/rE4iwgKXITKktINqF4Ca44/Desafio-Devs?node-id=5-706&node-type=frame&t=0aW5jNu8QW42GGaB-0
 
-![image]()
+![image](https://github.com/Leandro-Sales1/E-Xyon-Test/blob/main/public/Tela1.png)
 ## Primeira Tela:
 Levando em consideração o tempo disponível e que seria somente feita a página refente à Área judicial, coloquei apenas de forma visual o menu lateral, ele tem toda a estilização e efeito de "OnClick" como no figma, porém sem ação real na tela.
 
@@ -37,12 +37,12 @@ Na parte inferior, deixei apenas os números referentes à exibição dinâmicos
 
 Para adicionar novos elementos na lista, clique no botão "Nova" e será redirecionado para a próxima página.
 
-![image]()
+![image](https://github.com/Leandro-Sales1/E-Xyon-Test/blob/main/public/Tela2.png)
 ## Segunda Tela:
 Aqui nos deparamos com um formulário para a adição de uma nova área, todo o fomulário está funcional e com o tratamento referente ao necessário para a adição, sendo assim, se não forem adicionados os campos obrigatórios o botão de "Salvar" não será habilitado.
 Se clicar o botão de "Cancelar" o usuário é direcionado para tela inicial e o formulário zerado.
 
-![image]()
+![image](https://github.com/Leandro-Sales1/E-Xyon-Test/blob/main/public/Tela3.png)
 ## Terceira Tela:
 Com o formulário preenchido, o usuário poderá então salvar a nova área, onde receberá um alert com a mensagem de sucesso, dando o feedback necessário para o usuário. Ao fechar o alert, automaticamente o formulário será apagado e o usuário será direcionado para a página inicial do teste já com a lista atualizada com sua nova adição. 
 
