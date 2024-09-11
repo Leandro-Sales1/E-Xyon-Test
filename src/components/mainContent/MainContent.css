@@ -1,37 +1,41 @@
-.mainContentSection{
+.mainContentSection {
   width: 100%;
 }
 
-.areaTitle{
+.areaTitle {
   font-weight: 600;
   font-size: 1rem;
   color: var(--primary-color);
   margin: 2.25rem 0 2rem 5.2rem;
 }
 
-.seachBar{
+.seachBar {
   display: flex;
   width: 90%;
   margin: 0 auto;
   height: 3.25rem;
   background-color: #F1F1F1E5;
-  justify-items:center;
+  justify-items: center;
   align-items: center;
   justify-content: space-between;
 }
 
-.buttonNewDiv{
+.buttonNewDiv {
   border-left: var(--border);
   padding-left: 1.5rem;
 }
 
-.filterBar{
-  margin-top: 0.25rem;  
-  justify-content:flex-start;
+.filterBar {
+  margin-top: 0.25rem;
+  justify-content: flex-start;
   gap: 26rem;
+
+  @media screen and (min-width: 1500px) and (max-width: 1900px) {
+    gap: 18rem;
+  }
 }
 
-.filterButton{
+.filterButton {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,13 +46,13 @@
   margin-left: 1rem;
 }
 
-.statusSpan{
+.statusSpan {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.inative{
+.inative {
   margin-left: 0.8rem;
 }
 
@@ -61,13 +65,13 @@
   justify-content: space-between;
 }
 
-.footerText{
+.footerText {
   color: #00000066;
   font-weight: 600;
   font-size: 13px;
 }
 
-.footerPaginationDiv{
+.footerPaginationDiv {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,14 +79,14 @@
   margin-right: 4rem;
 }
 
-.footerButton{
+.footerButton {
   border: none;
   cursor: pointer;
   background-color: #FFFFFF;
   color: #0000006E
 }
 
-.footerSpan{
+.footerSpan {
   width: 17px;
   height: 17px;
   background-color: var(--primary-color);
@@ -92,17 +96,17 @@
   border-radius: 2px;
   padding-top: 4px;
   margin-bottom: 3px;
-  
+
 }
 
-.footerPerPageDiv{
+.footerPerPageDiv {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
 
-.footerTextPage{
+.footerTextPage {
   font-size: 13px;
   font-weight: 400;
   color: #00000066;
