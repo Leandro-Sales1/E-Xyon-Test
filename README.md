@@ -21,7 +21,7 @@ https://e-xyon-test.vercel.app/
 Primeiramente, gostaria de agradecer mais uma vez a oportunidade de participar desse processo seletivo.
 Sobre comentários no código, tento seguir sempre as boas práticas e não deixar comentários irrelevantes no código, além de usar sempre nomes de constantes bem condizentes com sua função, mas se tratando de um teste, tentei deixar tudo o mais claro possível, adicionando comentários extras.
 
-Tentei seguir o mais fiel possível ao figma, mas tendo em vista que os frames lá estão com 1146px x 836px e telas normais têm 1920px x 1080px, optei por fazer alguns ajustes de medidas para que a proporções do design se mantenham.
+Tentei seguir o mais fiel possível ao figma, mas tendo em vista que os frames lá estão com 1146px x 836px e telas normais têm 1920px x 1080px - 100% de zoom, optei por fazer alguns ajustes de medidas para que a proporções do design se mantenham. E como o tempo é reduzido, não foquei muito em responsividade dos componentes para as diversas configurações de telas, tendo em vista que isso demanda tempo e testes nas respectivas configurações.
 
 Adicionei extras, como o icon do E-xyon ao projeto e o status inativo, se o toggle não for ativado no momento do preenchimento do formulário.
 
