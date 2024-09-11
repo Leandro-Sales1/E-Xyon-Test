@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+
+/* CSS variables*/
+:root {
+  --primary-color: #1C5297;
+  --border: solid 0.6px #00000033;
+}
+
+
+
+
 /* Reset CSS*/
 
 html, body, div, span, applet, object, iframe,

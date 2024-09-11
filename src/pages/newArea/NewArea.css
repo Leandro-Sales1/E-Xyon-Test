@@ -24,6 +24,10 @@
   gap: 2px;
 }
 
+.ative{
+  margin-top: 1.75rem;
+}
+
 .formDiv {
   display: flex;
   flex-direction: column;

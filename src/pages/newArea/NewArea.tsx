@@ -4,7 +4,10 @@ import { TextField, FormControlLabel, Autocomplete, Chip, Button } from '@mui/ma
 import { FaCircleInfo } from "react-icons/fa6";
 import { IOSSwitch } from "../../components/iosSwitch";
 import { options } from "../../constants/options";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { format } from "date-fns";
+import { useRecoilState } from "recoil";
+import { AreaProps, areasState } from "../../states/areasState";
 
 export const NewArea = () => {
   const [nameInput, setNameInput] = useState('');
@@ -12,7 +15,13 @@ export const NewArea = () => {
   const [toggle, setToggle] = useState(false);
   const [multiUnitiesValues, setMultiUnitiesValues] = useState<string[] | never[]>([]);
   const [multiServicesValues, setMultiServicesValues] = useState<string[] | never[]>([]);
+  const navigate = useNavigate();
+  const [areaState, setAreaState] = useRecoilState(areasState);
 
+  const isFormComplete =
+    nameInput !== '' &&
+    multiUnitiesValues.length > 0 &&
+    multiServicesValues.length > 0;
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setNameInput(event.target.value);
   const handleDescriptionChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setDescriptionInput(event.target.value);
@@ -22,7 +31,25 @@ export const NewArea = () => {
 
   const handleSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    console.log(nameInput, descriptionInput, toggle, multiUnitiesValues, multiServicesValues)
+
+    // building a new area object
+    const date = format(new Date(), "dd-MM-yyyy");
+    const newArea: AreaProps = {
+      name: nameInput,
+      description: descriptionInput,
+      status: toggle,
+      unities: multiUnitiesValues,
+      services: multiServicesValues,
+      date
+    }
+
+    // adding the new Area
+    setAreaState([...areaState, newArea])
+
+    alert('Sua Área foi adicionada com sucesso!!\nVocê será redirecionado à página inicial automaticamente.')
+
+    // redirect to main page
+    navigate('/')
 
     // Cleaning the states of form
     setNameInput('')
@@ -30,9 +57,6 @@ export const NewArea = () => {
     setToggle(false)
     setMultiUnitiesValues([])
     setMultiServicesValues([])
-
-
-
   }
 
   return (
@@ -55,6 +79,7 @@ export const NewArea = () => {
               onChange={handleNameChange}
               placeholder="Digite o nome da área"
               variant="outlined"
+              required
             />
           </div>
           <FormControlLabel
@@ -65,8 +90,9 @@ export const NewArea = () => {
                 <FaCircleInfo style={{ color: '#71717199', fontSize: '12px' }} />
               </span>}
             labelPlacement="top"
-            sx={{ marginLeft: '2rem', justifyContent: 'space-between' }}
+            sx={{ margin: '0 0.5rem 0 2rem', justifyContent: 'space-between' }}
           />
+          {toggle === true && <span className="labelToggle ative">Ativo</span>}
         </div>
         <div className="formDiv">
           <label className="label">Descrição</label>
@@ -115,6 +141,7 @@ export const NewArea = () => {
                     height: 'auto',
                   }
                 }}
+                placeholder="Selecione as unidades"
                 variant="outlined"
               />
             )}
@@ -152,6 +179,7 @@ export const NewArea = () => {
                     height: 'auto',
                   }
                 }}
+                placeholder="Selecione os serviços"
                 variant="outlined"
               />
             )}
@@ -192,16 +220,20 @@ export const NewArea = () => {
               border: ' var(--border)',
               textTransform: 'none',
               fontSize: '14px',
-              fontWeight: '600'
+              fontWeight: '600',
+              '&.Mui-disabled': {
+                backgroundColor: '#1C529733',
+                color: '#ffffff',
+              },
             }}
             variant="contained"
             disableRipple
             disableElevation
             type="submit"
+            disabled={!isFormComplete}
           >Salvar</Button>
         </div>
       </form>
     </>
-
   )
 }
