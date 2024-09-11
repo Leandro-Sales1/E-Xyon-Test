@@ -165,7 +165,7 @@ export const MainContent = () => {
           ))}
         </List>
         <footer className="footer">
-          <p className="footerText">Exibindo <span style={{ color: '#000000BF' }}>1-{areaState.length < 8 ? areaState.length : 8}</span> de {areaState.length} - Áreas</p>
+          <p className="footerText">Exibindo <span style={{ color: '#000000BF' }}>1-{numberSelection}</span> de {areaState.length} - Áreas</p>
           <div className="footerPaginationDiv">
             <button className="footerButton"><ImPrevious2 /></button>
             <button className="footerButton"><GrFormPrevious /></button>
