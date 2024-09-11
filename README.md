@@ -47,5 +47,5 @@ Se clicar o botão de "Cancelar" o usuário é direcionado para tela inicial e o
 Com o formulário preenchido, o usuário poderá então salvar a nova área, onde receberá um alert com a mensagem de sucesso, dando o feedback necessário para o usuário. Ao fechar o alert, automaticamente o formulário será apagado e o usuário será direcionado para a página inicial do teste já com a lista atualizada com sua nova adição. 
 
 
-## Mais uma vez, obrigado pela oportunidade e espero que gostem do resultado!
+### Mais uma vez, obrigado pela oportunidade e espero que gostem do resultado!
 ### Leandro Sales. 
